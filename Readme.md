@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Dmitry](https://up.htmlacademy.ru/htmlcss/26/user/1176515).
-* Наставник: `Неизвестно`.
+* Наставник: [МихаилПоданаев](https://htmlacademy.ru/profile/id63947).
 
 ---
 
