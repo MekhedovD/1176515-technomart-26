@@ -146,9 +146,21 @@
       <div>
         <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис</p>
-        <!--Карта-->
-          <img src="#" alt="Карта">
-          <a href="">Заблудились? Напишите нам!</a>
+        <!--При нажатии карта увеличивается-->
+          <a href=""><img src="#" alt="Карта"></a>
+          <a href="" list="popup">Заблудились? Напишите нам!</a>
+          <!--Попап формы связи-->
+          <datalist id="popup" class="visually-hidden">
+            <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+              <p><label for="your-name">Ваше имя:</label>
+              <input id="your-name" type="text" name="name" placeholder="Имя Фамилия"></p>
+              <p><label for="your-email">Ваш e-mail:</label>
+              <input id="your-email" type="email" name="email" placeholder="email@example.com" required></p>
+              <p>Текст письма:</p>
+              <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea>
+              <button type="button">Отправить</button>
+            </form>
+          </datalist>
        </div>
       </section>
     </main>
