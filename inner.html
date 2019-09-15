@@ -49,7 +49,7 @@
           </section>
           <section>
             <!--форма "производители"-->
-            <form method="get" action="https://echo.htmlacademy.ru"></form>
+            <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Производители:</legend>
               <ul>
@@ -79,13 +79,16 @@
             <fieldset>
               <legend>Питание</legend>
               <ul>
-                <li><input type="radio" name="type-of-food" value="battery" id="filter-battery" checked></li>
+                <li><input type="radio" name="type-of-food" value="battery" id="filter-battery" checked>
                 <label for="filter-battery">Аккумуляторные</label>
-                <li><input type="radio" name="type-of-food" value="charge" id="filter-charge"></li>
+                </li>
+                <li><input type="radio" name="type-of-food" value="charge" id="filter-charge">
                 <label for="filter-charge">Сетевые</label>
+                </li>
               </ul>
             </fieldset>
-            <a href="#">Показать</a>
+            <button type="submit" name="show" value="Показать">Показать</button>
+          </form>
           </section>
           <section>
             <p>Сортировка</p>
@@ -93,6 +96,9 @@
               <li><a href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
+              <li><p><button type="button"><img src="img/icon-up-dir.png" alt=""></button>
+                <button type="button"><img src="img/icon-down-dir.png" alt=""></button>
+              </p></li>
             </ul>
           </section>
           <!--Список перфораторов-->
@@ -111,7 +117,7 @@
               <span>25500 ₽</span>
             </li>
             <li>
-              <img src="img/new flag.png" alt="">
+              <img src="img/new-flag.png" alt="">
               <p><a href="">Купить</a></p>
               <p><a href="">В закладки</a></p>
               <p>Перфоратор BOSCH BFG 2000</p>
@@ -124,7 +130,7 @@
               <span>15500 ₽</span>
             </li>
             <li>
-              <img src="img/new flag.png" alt="">
+              <img src="img/new-flag.png" alt="">
               <img src="img/perforator-2.jpg" alt="BFG 6000">
               <p>Перфоратор BOSCH BFG 6000</p>
               <span>30500 ₽</span>
@@ -136,14 +142,14 @@
               <span>12500 ₽</span>
             </li>
             <li>
-              <img src="img/new flag.png" alt="">
+              <img src="img/new-flag.png" alt="">
               <img src="img/perforator-1.jpg" alt="BFG 3000">
               <p>Перфоратор BOSCH BFG 3000</p>
               <span>22500 ₽</span>
               <span>15500 ₽</span>
             </li>
             <li>
-              <img src="img/perforator-2    .jpg" alt="BFG 6000">
+              <img src="img/perforator-2.jpg" alt="BFG 6000">
               <p>Перфоратор BOSCH BFG 6000</p>
               <span>30500 ₽</span>
               <span>25500 ₽</span>
@@ -172,14 +178,6 @@
               молотка.В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
               совмещены отбойный молоток и ударная дрель.</p>
           </section>
-          <!--Попап карточки заказа-->
-          <div class="visually-hiden b-popup">
-              <div>
-                <p>Товар добавлен в корзинку</p>
-                <a href="">Оформить заказ</a>
-                <a href="">Продожить покупки</a>
-              </div>
-          </div>
     </main>
     <footer>
         <section>
@@ -231,7 +229,12 @@
         </div>
        </section>
     </footer>
-
+ <!--Попап карточки заказа-->
+ <div class="visually-hiden order-cards-popup">
+    <p>Товар добавлен в корзинку</p>
+    <a href="">Оформить заказ</a>
+    <a href="">Продожить покупки</a>
+</div>
 
 </body>
 </html>
