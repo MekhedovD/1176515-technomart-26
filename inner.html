@@ -9,23 +9,29 @@
 <body>
     <header>
       <nav>
-        <a href="">Техномарт</a>
+        <a href="index.html">Техномарт</a>
         <!--Поле ввода для поиск-->
-        Поиск
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="form-search"></label>
+            <input id="form-search" type="search" name="search" value="" placeholder="Поиск:">
+          </p>
+        </form>
         <a href="">Закладки:</a>
         <a href="">Корзина:</a>
-        <button type="button">Оформить заказ</button>
+        <a href="">Оформить заказ</a>
       </nav>
       <section>
         <h2 class="visually-hidden">Навигация по сайту</h2>
         <p>Интернет магазин<br>строительных материалов<br>и инструментов для ремонта</p>
         <p>+7 (812) 555-05-55</p>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная д. !9/8</p>
+        <p>Равшан Джамутович</p>
         <a href="">Мои заказы</a>
         <a href="">Личный кабинет</a>
         <nav>
           <ul>
-            <li><a href="">Гланая</a></li>
+            <li><a href="index.html">Гланая</a></li>
             <li><a href="">Компания</a></li>
             <li><a>Каталог</a></li>
             <li><a href="">Новости</a></li>
@@ -44,15 +50,15 @@
           </ul>
           <h3>Перфораторы</h3>
           <section>
-            <h2 class="visually-hidden">Фильтр</h2>
-            <p>Фильтр</p>
-            <p>Цена</p>
-            <!--Бегунок-->
-          </section>
-          <section>
-            <h2 class="visually-hidden">Формы</h2>
-            <!--форма "производители"-->
+            <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
+            <p>Фильтр</p>
+            <!--Бегунок-->
+            <fieldset>
+              <legend>Цена:</legend>
+              <input type="range" name="price" id="filter-price" min="0" max="30000" value="10000">
+            </fieldset>
+            <!--форма "Производители-->
             <fieldset>
               <legend>Производители:</legend>
               <ul>
@@ -96,14 +102,25 @@
           <section>
             <h2 class="visually-hidden">Сортировка</h2>
             <p>Сортировка</p>
-            <ul>
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По функционалу</a></li>
-              <li><p><button type="button"><img src="img/icon-up-dir.png" alt=""></button>
-                <button type="button"><img src="img/icon-down-dir.png" alt=""></button>
-              </p></li>
-            </ul>
+            <form method="get" action="https://echo.htmlacademy.ru">
+              <ul>
+                <li>
+                  <input type="radio" name="sort" value="price" id="sort-price" checked>
+                  <label for="sort-price">По цене</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" value="type" id="sort-type">
+                  <label for="sort-type">По типу</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" value="functionality" id="sort-functionality">
+                  <label for="sort-functionality">По функционалу</label>
+                  </li>
+                <li><p><button type="button"><img src="img/icon-up-dir.png" alt=""></button>
+                  <button type="button"><img src="img/icon-down-dir.png" alt=""></button>
+                </p></li>
+              </ul>
+            </form>
           </section>
           <!--Список перфораторов-->
           <section>
@@ -122,11 +139,11 @@
               <span>25500 ₽</span>
             </li>
             <li>
-              <img src="img/new-flag.png" alt="">
-              <p><a href="">Купить</a></p>
-              <p><a href="">В закладки</a></p>
-              <p>Перфоратор BOSCH BFG 2000</p>
-              <span>12500 ₽</span>
+              <img src="img/perforator-2.jpg" alt="BFG 6000">
+              <!--сделать фоном красный уголок-->
+              <p>Перфоратор BOSCH BFG 6000</p>
+              <span>30500 ₽</span>
+              <span>25500 ₽</span>
             </li>
             <li>
               <img src="img/perforator-1.jpg" alt="BFG 3000">
@@ -147,7 +164,7 @@
               <span>12500 ₽</span>
             </li>
             <li>
-              <img src="img/new-flag.png" alt="">
+              <!--сделать фоном красный уголок-->
               <img src="img/perforator-1.jpg" alt="BFG 3000">
               <p>Перфоратор BOSCH BFG 3000</p>
               <span>22500 ₽</span>
@@ -239,12 +256,13 @@
        </section>
     </footer>
  <!--Попап карточки заказа-->
- <div class="visually-hiden order-cards-popup">
-    <button type="button"><img src="img/close-button.jpg" alt=""></button>
+ <section>
+   <h2 class="visually-hiden order-cards-popup">Добавление в корзину</h2>
+    <button type="button" name="close" value="Закрыть">Закрыть</button>
     <p>Товар добавлен в корзинку</p>
     <a href="">Оформить заказ</a>
     <a href="">Продожить покупки</a>
-</div>
+ </section>
 
 </body>
 </html>

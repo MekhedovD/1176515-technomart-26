@@ -9,10 +9,15 @@
       <nav>
         <a>Техномарт</a>
         <!--Поле ввода для поиск-->
-        Поиск
-        <a href="">Закладки:</a>
-        <a href="">Корзина:</a>
-        <button type="button">Оформить заказ</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="form-search"></label>
+            <input id="form-search" type="search" name="search" value="" placeholder="Поиск:">
+          </p>
+        </form>
+        <a href="">Закладки: 0</a>
+        <a href="">Корзина: 0</a>
+        <a href="">Оформить заказ</a>
       </nav>
       <section>
         <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -41,25 +46,11 @@
         <div>
           <p>Материалы</p>
           <a href="">На любой вкус</a>
-          <img src="img/new-flag.png" alt=""><!--угловой красный флажок-->
+          <!--сделать фоном красный уголок-->
         </div>
         <div>
           <p>Инструент</p>
           <a href="">На все случаи</a>
-        </div>
-        <div><!--Слайдер-->
-          <p><ul>
-            <!--Кнопки перехода слайдера-->
-            <li><input type="radio" name="slider" chesked></li>
-            <li><input type="radio" name="slider"></li>
-          </ul>
-          <!--Стрелки перехода слайдера-->
-          <a href=""></a>
-          <a href=""></a>
-        </p>
-          <p>Дрели</p>
-          <span>Соседям на радость</span>
-          <a href="">Открыть каталог</a>
         </div>
         <div>
           <p>Техника</p>
@@ -73,6 +64,32 @@
           <p>Доставка</p>
           <a href="">Бесплатно</a>
         </div>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Слайдер с товарами</h2>
+        <figure>
+          <img src="img/image-slider-drill.jpg" alt="Дрели">
+          <figcaption>
+            <p>Дрели
+            Соседям на радость!
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/image-slider-perforator.jpg" alt="Перфораторы">
+          <figcaption>
+            <p>Перфораторы
+              Настоящие мужские игрушки
+            </p>
+          </figcaption>
+        </figure>
+        <a href="inner.html">Открыть каталог</a>
+        <button type="button"></button><!--Левая стрелка-->
+        <button type="button"></button><!--Правая стрелка-->
+        <p>
+          <input type="radio"><!--Левая кнопка-->
+          <input type="radio"><!--Правая кнопка-->
+        </p>
       </section>
       <section>
         <h2 class="visually-hidden">Товары магазина</h2>
@@ -98,7 +115,7 @@
             <span>25500 ₽</span>
           </li>
           <li>
-            <img src="img/new-flag.png" alt="">
+            <!--сделать фоном красный уголок-->
             <p><a href="">Купить</a></p>
             <p><a href="">В закладки</a></p>
             <p>Перфоратор BOSCH BFG 2000</p>
@@ -128,19 +145,45 @@
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
         </div>
-        <div>
+        <form>
           <ul>
-            <li><a>Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Кредит</a></li>
+            <li>
+              <input type="radio" name="servise-group"  value="delivery" id="filter-delivery" checked>
+                <label for="filter-delivery">Доставка</label>
+            </li>
+            <li>
+              <input type="radio" name="servise-group" value="guarantee" id="filter-guarantee">
+                <label for="filter-guarantee">Гарантия</label>
+            </li>
+            <li>
+              <input type="radio" name="servise-group" value="credit" id="filter-credit">
+              <label for="filter-credit">Кредит</label>
+            </li>
           </ul>
-        </div>
+        </form>
         <div>
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подьезду
           совершенно бесплатно!
           Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
+          <!--Фоновая картинка-->
         </div>
+        <div class="visually-hidden">
+          <h3>Гарантия</h3>
+          <p>Если купленный у нас товар поломается или заискрит,
+            а также в случае пожара, спровоцированного его возгоранием,
+            вы всегда можете быть уверены в нашей гарантии.
+            Мы обменяем сгоревший товар на новый.
+            Дом уж восстановите как-нибудь сами.</p>
+            <!--Фоновая картинка-->
+        </div>
+        <div class="visually-hidden">
+          <h3>Кредит</h3>
+          <p>Залезть в долговую яму стало проще!
+            Кредитные консультанты придут вам на помощь.</p>
+        </div>
+          <a href="">Отправить заявку</a>
+          <!--Фоновая картинка-->
       </section>
       <section>
         <h2 class="visually-hidden">Контакты</h2>
@@ -162,8 +205,7 @@
         <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис</p>
         <!--При нажатии карта увеличивается-->
-          <a href=""><img src="#" alt="Карта"></a>
-          <img src="img/close-button.jpg" alt="">
+          <a href=""><img src="img/road-map-small.jpg" alt="Карта проезда"></a>
           <!--Ссылка-кнопка на попап формы связи-->
           <a href="">Заблудились? Напишите нам!</a>
        </div>
@@ -223,7 +265,8 @@
     </section>
   </footer>
  <!--Попап формы связи-->
- <div class="visually-hidden com-form-popup">
+ <section>
+    <h2 class="visually-hidden">Форма отправки</h2>
     <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
       <button type="button" name="close" value="свернуть">
         <img src="img/close-button.jpg" alt="">
@@ -235,8 +278,16 @@
       <p>Текст письма:</p>
       <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea>
       <button type="submit" name="send" value="Отправить">Отправить</button>
+      <button type="button" name="close" value="Закрыть">Закрыть</button>
     </form>
-  </div>
+ </section>
+  <!--Всплавающая карта-->
+  <section>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <img src="img/road-map-big.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <button type="button" name="close" value="Закрыть">Закрыть</button>
+  </section>
+
 
   </body>
 </html>
