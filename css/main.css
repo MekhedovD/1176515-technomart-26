@@ -104,6 +104,10 @@ div .shop-description  {
   background-color: #fff;
 }
 
+.user-name:focus {
+  color: #c5c5c5;
+}
+
 .login-link:hover,
 .login-registration:hover {
   color: #ee3643;
@@ -146,7 +150,7 @@ div .shop-description  {
 }
 
 .main {
-  background-clip: #fff;
+  background-color: #fff;
 }
 
 .main-navigation a {
@@ -223,7 +227,11 @@ div .shop-description  {
 }
 
 .subtitle {
-  c
+  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .subtitle ~ p {
@@ -235,9 +243,9 @@ div .shop-description  {
 }
 
 .partners li {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 20px;
   color: #000;
 }
@@ -275,6 +283,25 @@ div .shop-description  {
   color: #fff;
 }
 
+.footer-site-navigation a:hover,
+.footer-shop-item a:hover,
+.footer-feedback a:hover,
+.footer-development a:hover {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:focus,
+.footer-shop-item a:focus {
+  text-decoration: none;
+  opacity: .5;
+}
+
+.footer-feedback a:focus,
+.footer-development a:focus {
+  text-decoration: none;
+  color: #ee3643;
+}
+
 .footer-contact p {
   font-family: 'Cuprum Regular', Arial, sans-serif;
   font-size: 18px;
@@ -285,6 +312,36 @@ div .shop-description  {
   font-family: 'Cuprum Regular', Arial, sans-serif;
   font-size: 18px;
   color: #ffd180;
+}
+
+.footer-social li {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #212a3a;
+  border-radius: 50%;
+}
+
+ .icon-social-vk {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+}
+
+.icon-social-fb {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.icon-social-ig {
+  position: absolute;
+  top: 10px;
+  right: 9px;
+}
+
+.footer-social li:hover {
+  background-color: #ee3643;
 }
 
 .footer-copyright p {
