@@ -57,15 +57,16 @@
         </section>
       </section>
     </header>
-    <main class="container main">
+    <main class="main">
+      <div class="wr-main container">
           <ul class="main-navigation">
             <li><a href="">Каталог</a></li>
             <li><a href="">Инструмент</a></li>
             <li class="main-navigation-current"><a>Перфораторы</a></li>
           </ul>
           <h3 class="title page-title">Перфораторы</h3>
-          <div class="wr-product">
-          <section class=" wr-filtres filtres">
+        <div class="wr-product">
+          <div class=" wr-filtres filtres">
             <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <p>Фильтр</p>
@@ -130,7 +131,7 @@
             </fieldset>
             <a href="" class="button">Показать</a>
           </form>
-          </section>
+        </div>
           <div class="wr-product-list">
           <section class="sorting">
             <h2 class="visually-hidden">Сортировка</h2>
@@ -145,9 +146,9 @@
                 <li>
                   <a href="">По функционалу</a>
                 </li>
-                <li><p><button type="button"><img src="img/icon-up-dir.png" alt=""></button>
-                  <button type="button"><img src="img/icon-down-dir.png" alt=""></button>
-                </p></li>
+                <li><button class="button" type="button"></button>
+                  <button class="button" type="button"></button>
+                </li>
               </ul>
           </section>
           <!--Список перфораторов-->
@@ -247,7 +248,7 @@
             </ul>
           </section>
           </div>
-          </div>
+        </div>
           <div class="pagination">
             <ul class="pagination-list">
               <li class="current"><a>1</a></li>
@@ -256,7 +257,9 @@
               <li class="next"><a href="">Следующая</a></li>
             </ul>
           </div>
-          <section>
+          </div>
+          <div class="bg-main-bottom">
+          <section class="container destination">
             <h2 class="visually-hidden">Ода о перфораторе</h2>
             <h3 class="subtitle">Пара слов о перфораторах</h3>
             <p>Перфоратор — универсальный строительный инструмент.
@@ -266,6 +269,7 @@
               молотка.В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
               совмещены отбойный молоток и ударная дрель.</p>
           </section>
+          </div>
     </main>
     <footer class="footer">
         <section class="container footer-top">
