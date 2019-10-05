@@ -56,20 +56,49 @@
     <!--Основное содержание-->
     <main class="container main">
       <section class="goods">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <div class="store-nav materials">
-          <p>Материалы</p>
-          <a class="bt-store" href="">На любой вкус</a>
+        <div class="goods-item-top">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <div class="store-nav materials">
+            <p>Материалы</p>
+            <a class="bt-store" href="">На любой вкус</a>
           <!--сделать фоном красный уголок-->
+          </div>
+          <div class="store-nav tool">
+            <p>Инструент</p>
+            <a class="bt-store" href="">На все случаи</a>
+          </div>
+          <div class="store-nav technics">
+            <p>Техника</p>
+            <a class="bt-store" href="">Для стройки</a>
+          </div>
         </div>
-        <div class="store-nav tool">
-          <p>Инструент</p>
-          <a class="bt-store" href="">На все случаи</a>
-        </div>
-        <div class="store-nav technics">
-          <p>Техника</p>
-          <a class="bt-store" href="">Для стройки</a>
-        </div>
+
+        <div class="wr-goods">
+        <section class="slider">
+            <h2 class="visually-hidden">Слайдер с товарами</h2>
+            <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+
+            <div class="slider-controls">
+                <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+              <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a href="" class="button">Открыть каталог</a>
+              </li>
+
+              <li class="slider-item">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                  <a href="" class="button">Открыть каталог</a>
+              </li>
+            </ul>
+          </section>
+
+        <div class="goods-item-bottom">
         <div class="store-nav discounts">
           <p>Скидки 50%</p>
           <a class="bt-store" href="">На 350 товаров</a>
@@ -78,8 +107,10 @@
           <p>Доставка</p>
           <a class="bt-store" href="">Бесплатно</a>
         </div>
+        </div>
+        </div>
 
-        <section class="slider">
+        <!-- <section class="slider">
           <h2 class="visually-hidden">Слайдер с товарами</h2>
           <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
           <input class="visually-hidden" type="radio" id="product-2" name="toggle">
@@ -101,7 +132,7 @@
                 <a href="" class="button">Открыть каталог</a>
             </li>
           </ul>
-        </section>
+        </section> -->
       </section>
       <section class="product">
         <h2 class="visually-hidden">Товары магазина</h2>
@@ -226,9 +257,9 @@
         <p>Мы можем доставить ваш товар в самые отдаленные точки Росии!<br>
           Техномарт работает со многими транспортными компаниями:</p>
         <ul class="partners-list">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
+          <li class="partners-item">Деловые линии</li>
+          <li class="partners-item">Автотрейдинг</li>
+          <li class="partners-item">ЖелДорЭкспедиция</li>
         </ul>
         <a class="button" href="">Подробнее о компании</a>
       </div>
