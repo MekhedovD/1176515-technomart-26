@@ -202,33 +202,92 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
-        <div>
+        <div class="services-title">
           <h3 class="title">Сервисы</h3>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
         </div>
-        <!--каким образом оформить список? кнопка радио тут не подходит-->
-          <ul>
-            <li>
-              <input type="radio" name="servise-group"  value="delivery" id="filter-delivery" checked>
-                <label for="filter-delivery">Доставка</label>
-            </li>
-            <li>
-              <input type="radio" name="servise-group" value="guarantee" id="filter-guarantee">
-                <label for="filter-guarantee">Гарантия</label>
-            </li>
-            <li>
-              <input type="radio" name="servise-group" value="credit" id="filter-credit">
-              <label for="filter-credit">Кредит</label>
-            </li>
-          </ul>
 
-        <div>
+
+
+          <div class="services-bg">
+            <input class="visually-hidden" type="radio" name="servise-group" value="delivery" id="filter-delivery" checked>
+            <input class="visually-hidden" type="radio" name="servise-group" value="guarantee" id="filter-guarantee">
+            <input class="visually-hidden" type="radio" name="servise-group" value="credit" id="filter-credit">
+            <div class="services-controls">
+              <label class="services-controls-item services-controls-item--1" for="filter-delivery"><p>Доставка</p></label>
+              <label class="services-controls-item services-controls-item--2" for="filter-guarantee"><p>Гарантия</p></label>
+              <label class="services-controls-item services-controls-item--3" for="filter-credit"><p>Кредит</p></label>
+            </div>
+            <ul class="services-bg-list">
+                <li class="services-bg-item">
+                  <h3 class="headline-title">Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подьезду
+                  совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж</p>
+                </li>
+                <li class="services-bg-item">
+                  <h3 class="headline-title">Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит,
+                  а также в случае пожара, спровоцированного его возгоранием,
+                  вы всегда можете быть уверены в нашей гарантии.
+                  Мы обменяем сгоревший товар на новый.
+                  Дом уж восстановите как-нибудь сами.</p>
+                </li>
+                <li class="services-bg-item">
+                  <h3 class="headline-title">Кредит</h3>
+                  <p>Залезть в долговую яму стало проще!
+                  Кредитные консультанты придут вам на помощь.</p>
+                  <a href="">Отправить заявку</a>
+                </li>
+            </ul>
+          </div>
+
+
+
+
+        <!-- <div class="services-bg">
+          <input class="visually-hidden" type="radio" name="servise-group" value="delivery" id="filter-delivery" checked>
+          <input class="visually-hidden" type="radio" name="servise-group" value="guarantee" id="filter-guarantee">
+          <input class="visually-hidden" type="radio" name="servise-group" value="credit" id="filter-credit">
+
+          <div class="services-controls">
+            <label class="services-controls-item services-controls-item--1" for="filter-delivery">Доставка</label>
+            <label class="services-controls-item services-controls-item--2" for="filter-guarantee">Гарантия</label>
+            <label class="services-controls-item services-controls-item--3" for="filter-credit">Кредит</label>
+          </div>
+
+          <ul class="services-bg-list">
+              <li class="services-bg-item">
+                <h3 class="headline-title">Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подьезду
+                совершенно бесплатно!
+                Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
+              </li>
+              <li class="services-bg-item">
+                <h3 class="headline-title">Гарантия</h3>
+                <p>Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии.
+                Мы обменяем сгоревший товар на новый.
+                Дом уж восстановите как-нибудь сами.</p>
+              </li>
+              <li class="services-bg-item">
+                <h3 class="headline-title">Кредит</h3>
+                <p>Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.</p>
+                <a href="">Отправить заявку</a>
+              </li>
+            </ul> -->
+
+        <!-- <div>
+
           <h3 class="headline-title">Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подьезду
           совершенно бесплатно!
           Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
-          <!--Фоновая картинка-->
+
+
         </div>
         <div class="visually-hidden">
           <h3 class="headline-title">Гарантия</h3>
@@ -237,7 +296,8 @@
             вы всегда можете быть уверены в нашей гарантии.
             Мы обменяем сгоревший товар на новый.
             Дом уж восстановите как-нибудь сами.</p>
-            <!--Фоновая картинка-->
+
+
         </div>
         <div class="visually-hidden">
           <h3 class="headline-title">Кредит</h3>
@@ -245,8 +305,10 @@
             Кредитные консультанты придут вам на помощь.</p>
             <a href="">Отправить заявку</a>
         </div>
-          <!--Фоновая картинка-->
+
+      </div>-->
       </section>
+
       <section class="main-contact">
         <h2 class="visually-hidden">Контакты</h2>
       <div class="partners">

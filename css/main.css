@@ -381,6 +381,17 @@ div .shop-description  {
   background-color: #fff;
 }
 
+.destination  p,
+.services p,
+.main-contact p {
+  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  font-stretch: condensed;
+  color: #000;
+}
+
 .main-navigation {
   display: flex;
   position: relative;
@@ -544,7 +555,6 @@ div .shop-description  {
 
 .slider-controls label:nth-child(1) {
   position: relative;
-
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -554,6 +564,7 @@ div .shop-description  {
   transform: rotate(45deg);
   right: 144%;
 }
+
 .slider-controls label:nth-child(2) {
   position: relative;
   display: inline-block;
@@ -575,7 +586,6 @@ div .shop-description  {
   width: 18px;
   height: 18px;
 }
-
 
 .slider-item {
   display: none;
@@ -635,6 +645,99 @@ div .shop-description  {
   margin-bottom: 128px;
 }
 
+/*секция ДОСТАВКА*/
+.services-bg {
+  position: relative;
+  display: flex;
+  background-color: #eeeeee;/*временно*/
+}
+
+.services-bg-item {
+  display: none;
+}
+
+/* .services-bg-item:nth-child(1) {
+  display: block;
+} */
+
+.services-bg-list {
+  width: 100%;
+}
+
+.services-bg-list p {
+  max-width: 288px;
+  line-height: 25px;
+  margin-top: 24px;
+}
+
+.services-controls label {
+  position: relative;
+  display: flex;
+  width: 237px;
+  height: 63px;
+
+  /* Временно для демонстрации */
+  background-color: red;
+}
+
+.services-controls .label:focus {
+  background-color: #fff;
+}
+
+.services-bg-item {
+  display: none;
+}
+
+.services-bg-item:nth-child(1) {
+  background-image: url('../img/bg-car.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services-bg-item:nth-child(2) {
+  background-image: url('../img/bg-guarantee.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services-bg-item:nth-child(3) {
+  background-image: url('../img/bg-credit.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#filter-delivery:checked ~ .services-bg-list .services-bg-item:nth-child(1) {
+  display: block;
+}
+
+#filter-guarantee:checked ~ .services-bg-list .services-bg-item:nth-child(2) {
+  display: block;
+}
+
+#filter-credit:checked ~ .services-bg-list .services-bg-item:nth-child(3) {
+  display: block;
+}
+
+#filter-delivery:checked ~ .services-controls .services-controls-item--1::before,
+#filter-guarantee:checked ~ .services-controls .services-controls-item--2::before,
+#filter-credit:checked ~ .services-controls .services-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 237px;
+  height: 63px;
+  /* margin: -4px; */
+  background-color: #367315;
+}
+.services-controls p {
+  padding: 10px;
+  color:#fff;
+}
+.services-controls p:focus {
+  color:#999;
+}
 
 
 
@@ -1166,12 +1269,12 @@ input[type="radio"]:checked + label:after {
   opacity: .7;
 }
 
-.services {
+/* .services {
   background-color: #f4f8f9;
   background-image: url(../img/bg-car.png);
   background-repeat: no-repeat;
-  background-position: 50% 60%;/*отцентровать позже*/
-}
+  background-position: 50% 60%;
+} */
 
 .wr-product {
   display: flex;
@@ -1354,7 +1457,7 @@ input[type="radio"]:checked + label:after {
   color: #32425c;
 }
 
-.destination  p,
+/* .destination  p,
 .services p,
 .main-contact p {
   font-family: 'PT Sans Regular', Arial, sans-serif;
@@ -1363,7 +1466,7 @@ input[type="radio"]:checked + label:after {
   line-height: 20px;
   font-stretch: condensed;
   color: #000;
-}
+} */
 
 .destination  p {
   line-height: 25px;
