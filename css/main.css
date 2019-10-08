@@ -1520,7 +1520,9 @@ input[type="radio"]:checked + label:after {
 .producers .button,
 .main-contact .button,
 .product .button,
-.slider .button {
+.slider .button,
+.modal-email .button,
+.wr-modal-order-card .button  {
   font-family: 'Cuprum Regular', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -1735,3 +1737,196 @@ input[type="radio"]:checked + label:after {
   padding-right: 24px;
 }
 
+/*Модальные окна*/
+/*Карточка заказа*/
+.modal {
+  position: fixed;
+  width: 600px;
+  background-color: #fff;/*временный*/
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);/*перевести в 6значный*/
+  z-index: 10;
+}
+
+.modal-email {
+  display: none;
+  top: 20%;
+  left: 30%;
+  border-top: 7px solid #e9292a;
+}
+
+.modal-email .modal-close,
+.modal-order-card .modal-close {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 10px;
+  width: 25px;
+  height: 3px;
+  background-color: #ee3643;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.wr-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.wr-form p:nth-child(1) {
+  margin-left: 60px;
+  margin-right: 30px;
+}
+
+.wr-form p:nth-child(2) {
+  margin-right: 60px;
+  margin-left: 0;
+}
+
+.modal-email span {
+  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: condensed;
+  padding: 13px 0 10px;
+  color: #000;
+}
+
+.modal-email p {
+  margin-left: 60px;
+}
+
+.modal-email input[type="text"],
+.modal-email input[type="email"],
+.modal-email textarea {
+  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  font-stretch: condensed;
+  width: 225px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: 2px solid transparent;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-color: #ccc;
+}
+
+.modal-email textarea {
+  width: 480px;
+  resize: none;
+}
+.modal-email .button {
+  padding: 10px 215px;
+  outline: none;
+  border: 2px solid transparent;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: 60px
+}
+
+.bg-modal-email {
+  margin-top: 20px;
+  background-color: #f2f6f8;
+}
+
+/*Всплывающая карта*/
+.modal-map {
+  display: none;
+  top: 8%;
+  left: 15%;
+  width: 766px;
+  height: 447px;
+}
+
+.modal-map .modal-close {
+  position: absolute;
+  top: 3%;
+  right: -22%;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.wr-modal-order-card {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  text-align: center;
+  background-color: #f2f6f8;
+}
+
+.modal-order-card {
+  display: none;
+  top: 20%;
+  left: 30%;
+  border-top: 7px solid #e9292a;
+}
+
+.modal-order-card p {
+  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-stretch: condensed;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #000;
+}
+
+.modal-order-card p::before {
+  content: "";
+  position: absolute;
+  left: 83px;
+  top: 45px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #63a63e;
+}
+
+.modal-order-card p::after {
+  content: "";
+  position: absolute;
+  left: 95px;
+  top: 60px;
+  width: 20px;
+  height: 11px;
+  border-radius: 1px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.wr-modal-order-card a {
+  display: inline-block;
+  padding: 10px 39px;
+  margin-left: 23px;
+}
+
+.wr-modal-order-card a:nth-child(2) {
+  color: #000;
+  background-color: #fff;
+}

@@ -390,28 +390,28 @@
     </div>
     </section>
   </footer>
+
  <!--Попап формы связи-->
- <section>
+ <section class="modal modal-email">
     <h2 class="visually-hidden">Форма отправки</h2>
+    <button class="modal-close" type="button" name="close" value="Закрыть"></button>
     <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-      <button type="button" name="close" value="свернуть">
-        Закрыть
-      </button>
-      <p><label for="your-name">Ваше имя:</label>
-      <input id="your-name" type="text" name="name" placeholder="Имя Фамилия"></p>
-      <p><label for="your-email">Ваш e-mail:</label>
-      <input id="your-email" type="email" name="email" placeholder="email@example.com" required></p>
-      <p>Текст письма:</p>
-      <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea>
-      <button type="submit" name="send" value="Отправить">Отправить</button>
-      <button type="button" name="close" value="Закрыть">Закрыть</button>
+      <div class="wr-form">
+        <p><span>Ваше имя:</span><label for="your-name"></label>
+        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия"></p>
+        <p><span>Ваш e-mail:</span><label for="your-email"></label>
+        <input id="your-email" type="email" name="email" placeholder="email@example.com" required></p>
+      </div>
+      <p><span>Текст письма:</span>
+      <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea></p>
+      <div class="bg-modal-email"><button class="button" type="submit" name="send" value="Отправить">Отправить</button></div>
     </form>
  </section>
   <!--Всплавающая карта-->
-  <section>
+  <section class=" modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/road-map-big.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      <button type="button" name="close" value="Закрыть">Закрыть</button>
+      <button  class="modal-close" type="button" name="close" value="Закрыть"></button>
   </section>
 
 

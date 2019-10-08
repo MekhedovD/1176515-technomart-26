@@ -327,12 +327,17 @@
        </section>
     </footer>
  <!--Попап карточки заказа-->
- <section>
-   <h2 class="visually-hiden order-cards-popup">Добавление в корзину</h2>
-    <button type="button" name="close" value="Закрыть">Закрыть</button>
+
+ <section class=" modal modal-order-card">
+    <div class="bg-modal">
+   <h2 class="visually-hidden">Добавление в корзину</h2>
+    <button class="modal-close" type="button" name="close" value="Закрыть"></button>
     <p>Товар добавлен в корзинку</p>
-    <a href="">Оформить заказ</a>
-    <a href="">Продожить покупки</a>
+   </div>
+    <div class="wr-modal-order-card">
+      <a class="button" href="">Оформить заказ</a>
+      <a class="button" href="">Продожить покупки</a>
+    </div>
  </section>
 
 </body>
