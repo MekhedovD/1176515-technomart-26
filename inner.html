@@ -82,12 +82,13 @@
                     <div class="toggle toggle-max"><div></div></div>
                   </div>
                   <div class="price-controls">
-                    <label class="min-price">
+                    <!-- <label class="min-price"> -->
                       <input type="text" name="min-price" value="0">
-                    </label>
-                    <label class="max-price">
+                    <!-- </label> -->
+                    <span>&mdash;</span>
+                    <!-- <label class="max-price"> -->
                       <input type="text" name="max-price" value="3000">
-                    </label>
+                    <!-- </label> -->
                   </div>
                 </div>
             </fieldset>
@@ -118,7 +119,7 @@
               </ul>
             </fieldset>
               <!--форма "Питание"-->
-            <fieldset>
+            <fieldset class="filter-power">
               <legend>Питание</legend>
               <ul>
                 <li><input class="filter-input" type="radio" name="type-of-food" value="battery" id="filter-battery" checked>
@@ -161,7 +162,7 @@
               <span class="product-discount">22500 ₽</span>
               <span class="product-price">15500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -171,7 +172,7 @@
               <span class="product-discount">30500 ₽</span>
               <span class="product-price">25500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -181,7 +182,7 @@
               <span class="product-category">Перфоратор BOSCH BFG 6000</span>
               <span class="product-price">25500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -191,7 +192,7 @@
               <span class="product-discount">22500 ₽</span>
               <span class="product-price">15500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -202,7 +203,7 @@
               <span class="product-discount">30500 ₽</span>
               <span class="product-price">25500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -211,7 +212,7 @@
               <span class="product-category">Перфоратор BOSCH BFG 2000</span>
               <span class="product-price">12500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -222,7 +223,7 @@
               <span class="product-discount">22500 ₽</span>
               <span class="product-price">15500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -232,7 +233,7 @@
               <span class="product-discount">30500 ₽</span>
               <span class="product-price">25500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -241,7 +242,7 @@
               <span class="product-category">Перфоратор BOSCH BFG 2000</span>
               <span class="product-price">12500 ₽</span>
               <div class="actions">
-                <a class="buy-item">Купить</a>
+                <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
               </div>
             </li>
@@ -265,8 +266,8 @@
             <p>Перфоратор — универсальный строительный инструмент.
               Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
               Существуют электромеханические и пневматические перфораторы.
-              Современные модели могут выполнять функции дрели, шуруповерта и отбойного<br>
-              молотка.В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
+              Современные модели могут выполнять функции дрели, шуруповерта и отбойного
+              молотка.В<br>ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
               совмещены отбойный молоток и ударная дрель.</p>
           </section>
           </div>
@@ -339,6 +340,31 @@
       <a class="button" href="">Продожить покупки</a>
     </div>
  </section>
+
+ <script>
+
+  var orderLink = document.querySelector(".checkout-order");
+  var orderPopup = document.querySelector(".modal-order-card");
+  var orderClose = popup.querySelector(".modal-close");
+
+  orderLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    orderPopup.classList.add("modal-show");
+});
+orderClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    orderPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (orderPopup.classList.contains("modal-show")) {
+        orderPopup.classList.remove("modal-show");
+      }
+    }
+  });
+ </script>
 
 </body>
 </html>
