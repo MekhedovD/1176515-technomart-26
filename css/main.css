@@ -693,6 +693,16 @@ div .shop-description  {
   margin: 24px 0 24px;
 }
 
+.services-controls p {
+  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  font-stretch: condensed;
+  color: #fff;
+  padding: 18px 22px;
+  /* z-index: 5; */
+  cursor: pointer;
+}
 .services-controls label {
   position: relative;
   display: flex;
@@ -703,7 +713,7 @@ div .shop-description  {
   border-bottom: 1px solid #293449;
 }
 
-/* .services-controls .label:focus {
+/* .services-controls .label:active {
   background-color: #fff;
 } */
 
@@ -744,7 +754,7 @@ div .shop-description  {
   display: block;
 }
 
-#filter-delivery:checked ~ .services-controls .services-controls-item--1::before,
+/* #filter-delivery:checked ~ .services-controls .services-controls-item--1::before,
 #filter-guarantee:checked ~ .services-controls .services-controls-item--2::before,
 #filter-credit:checked ~ .services-controls .services-controls-item--3::before {
   content: "";
@@ -755,6 +765,21 @@ div .shop-description  {
   height: 63px;
   background-color: #fff;
   color: #000;
+} */
+
+#filter-delivery:checked ~ .services-controls label[for=filter-delivery],
+#filter-guarantee:checked ~ .services-controls label[for=filter-guarantee],
+#filter-credit:checked ~ .services-controls label[for=filter-credit] {
+  /* content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 63px; */
+  background-color: #fff;
+  color: #32425c;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .services-controls {
@@ -781,16 +806,6 @@ div .shop-description  {
   background-position: 0 0;
 }
 
-.services-controls p {
-  font-family: 'Cuprum Bold', Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-  font-stretch: condensed;
-  color: #fff;
-  padding: 18px 22px;
-  z-index: 5;
-  cursor: pointer;
-}
 /* .services-controls p:focus {
   color:#999;
 } */
@@ -1265,7 +1280,7 @@ input[type="radio"]:checked + label:after {
 
 .buy-item:active {
   border-color: #518534;
-  background-color: #518534;/*почему не работает?*/
+  background-color: #518534;
   cursor: pointer;
 }
 
@@ -1338,7 +1353,7 @@ input[type="radio"]:checked + label:after {
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: space-between;
-  align-items: stretch;/*почему не работают вер.отступы*/
+  align-items: stretch;
 }
 
 .producers-list li {
