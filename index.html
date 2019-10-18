@@ -15,7 +15,7 @@
         <!--Поле ввода для поиск-->
         <form action="https://echo.htmlacademy.ru" method="get">
 
-            <label for="form-search"></label>
+
             <input id="form-search" type="search" name="search" value="" placeholder="Поиск:">
 
         </form>
@@ -87,13 +87,13 @@
               <li class="slider-item">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
-                  <a href="" class="button">Открыть каталог</a>
+                  <a href="inner.html" class="button">Открыть каталог</a>
               </li>
 
               <li class="slider-item">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
-                  <a href="" class="button">Открыть каталог</a>
+                  <a href="inner.html" class="button">Открыть каталог</a>
               </li>
             </ul>
           </section>
@@ -392,24 +392,29 @@
 
  <!--Попап формы связи-->
  <section class="modal modal-email">
-    <h2 class="visually-hidden">Форма отправки</h2>
-    <button class="modal-close" type="button" name="close" value="Закрыть"></button>
-    <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-      <div class="wr-form">
-        <p><span>Ваше имя:</span><label for="your-name"></label>
-        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия"></p>
-        <p><span>Ваш e-mail:</span><label for="your-email"></label>
-        <input id="your-email" type="email" name="email" placeholder="email@example.com" required></p>
+  <h2 class="visually-hidden">Форма отправки</h2>
+  <button class="modal-close" type="button" name="close" value="Закрыть"></button>
+  <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+    <div class="wr-form">
+      <div class="form-name"><label for="your-name">Ваше имя:</label>
+        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
       </div>
-      <p><span>Текст письма:</span>
-      <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea></p>
-      <div class="bg-modal-email"><button class="button" type="submit" name="send" value="Отправить">Отправить</button></div>
-    </form>
- </section>
-  <!--Попап всплывающей карты-->
+      <div class="form-email"><label for="your-email">Ваш e-mail:</label>
+        <input id="your-email" type="email" name="email" placeholder="email@example.com" required>
+      </div>
+    </div>
+    <div class="form-text"><label for="your-text">Текст письма:</label>
+      <textarea name="your-text" rows="5" cols="30" placeholder="В свободной форме" required></textarea>
+    </div>
+    <div class="bg-modal-email"><button class="button" type="submit" name="send" value="Отправить">Отправить</button></div>
+  </form>
+</section>
+
+   <!--Попап всплывающей карты-->
   <section class=" modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="map-img modal-link-map"><img src="img/road-map-big.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></div>
+      <div class="map-img modal-link-map"><a target="blank" href="https://yandex.by/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=15">
+        <img src="img/road-map-big.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a></div>
       <button  class="modal-close" type="button" name="close" value="Закрыть"></button>
   </section>
   <!--Попап карточки заказа-->
@@ -426,103 +431,8 @@
     </div>
  </section>
 
-  <script>
-    /*форма*/
-    var link = document.querySelector(".modal-link-contact");
-    var popup = document.querySelector(".modal-email");
-    var close = popup.querySelector(".modal-close");
-    var form = popup.querySelector("form");
-    var name = popup.querySelector("[name=name]");
-    var email = popup.querySelector("[name=email]");
-    var isStorageSupport = true;
-    var storage = "";
-      try {
-      storage = localStorage.getItem("name");
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    link.addEventListener("click", function (evt){
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      if (storage) {
-      name.value = storage;
-      email.focus();
-    }else {
-      name.focus();
-    }
-    });
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-  });
-
-  form.addEventListener("submit", function (evt) {
-    if (!name.value || !email.value) {
-      evt.preventDefault();
-      popup.classList.add("modal-error");
-    }else {
-      if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
-      }
-    }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      }
-    }
-  });
-  /*Карта*/
-  var mapLink = document.querySelector(".modal-link-map");
-  var mapPopup = document.querySelector(".modal-map");
-  var mapClose = mapPopup.querySelector(".modal-close");
-
-  mapLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.add("modal-show");
-});
-mapClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.remove("modal-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (mapPopup.classList.contains("modal-show")) {
-        mapPopup.classList.remove("modal-show");
-      }
-    }
-  });
-  /*карточка заказа*/
-  var orderLink = document.querySelector(".checkout-order");
-  var orderPopup = document.querySelector(".modal-order-card");
-  var orderClose = document.querySelector(".modal-close-card");
-
-  orderLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    orderPopup.classList.add("modal-show");
-});
-orderClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    orderPopup.classList.remove("modal-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (orderPopup.classList.contains("modal-show")) {
-        orderPopup.classList.remove("modal-show");
-      }
-    }
-  });
-  </script>
+  <script type="text/javascript" src="./js/modal-form.js"></script>
+  <script type="text/javascript" src="./js/modal-map.js"></script>
+  <script type="text/javascript" src="./js/modal-card-index.js"></script>
  </body>
 </html>

@@ -16,10 +16,9 @@
         <a class="header-logo" href="index.html">Техномарт</a>
         <!--Поле ввода для поиск-->
         <form action="https://echo.htmlacademy.ru" method="get">
-          <p>
-            <label for="form-search"></label>
+
             <input id="form-search" type="search" name="search" value="" placeholder="Поиск:">
-          </p>
+
         </form>
         <a class="bookmarks" href="">Закладки: 0</a>
         <a class="basket basket-focus" href="">Корзина: 10</a>
@@ -35,7 +34,13 @@
           <span class="header-number">+7 (812) 555-05-55</span>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная д.9/8</span>
         </div>
-        <p><a href="" class="user-name"><span>Равшан Джамутович</span></a></p>
+        <!-- <p><a href="" class="user-name">Равшан Джамутович</a>
+          <a href="" class="visually-hidde a">Выйти</a>
+        </p> -->
+        <p class="authorized">
+          <a href="" class="user-name">Равшан Джамутович</a>
+          <a href="" class="user-exit"></a>
+        </p>
         <ul class="user">
             <li><a class="user-orders" href="">Мои заказы</a></li>
             <li><a class="user-personal" href="">Личный кабинет</a></li>
@@ -130,7 +135,7 @@
                 </li>
               </ul>
             </fieldset>
-            <a href="" class="button">Показать</a>
+            <a href="" class="submit">Показать</a>
           </form>
         </div>
           <div class="wr-product-list">
@@ -180,7 +185,7 @@
               <img src="img/perforator-2.jpg" alt="BFG 6000">
               <!--сделать фоном красный уголок-->
               <span class="product-category">Перфоратор BOSCH BFG 6000</span>
-              <span class="product-price">25500 ₽</span>
+              <span class="product-price">12500 ₽</span>
               <div class="actions">
                 <a class="checkout-order buy-item">Купить</a>
                 <a class="bookmarks-item" href="">В закладки</a>
@@ -341,30 +346,6 @@
     </div>
  </section>
 
- <script>
-
-  var orderLink = document.querySelector(".checkout-order");
-  var orderPopup = document.querySelector(".modal-order-card");
-  var orderClose = document.querySelector(".modal-close");
-
-  orderLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    orderPopup.classList.add("modal-show");
-});
-orderClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    orderPopup.classList.remove("modal-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (orderPopup.classList.contains("modal-show")) {
-        orderPopup.classList.remove("modal-show");
-      }
-    }
-  });
- </script>
-
-</body>
+ <script type="text/javascript" src="./js/modal-card-inner.js"></script>
+ </body>
 </html>
