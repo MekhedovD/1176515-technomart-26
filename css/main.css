@@ -670,8 +670,8 @@ input[type="search"]:focus+.search-icon path {
 .goods {
   padding-top: 60px;
   padding-bottom: 33px;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .goods-item-top {
@@ -681,7 +681,7 @@ input[type="search"]:focus+.search-icon path {
 
 .wr-goods {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   padding-top: 20px;
 }
 .goods-item-bottom {
@@ -1463,10 +1463,6 @@ input[type="radio"]:checked + label:after {
   background-position: 100% 0;
 }
 
-.perferator-list img {
-  width: 218px;
-}
-
 .producers-list {
   display: flex;
   flex-flow: row wrap;
@@ -1575,44 +1571,44 @@ input[type="radio"]:checked + label:after {
   outline: none;
 }
 
-.sorting-button .button:nth-child(1) {
+.sorting-button .button:first-child {
   border: 6px solid #f7f3ec;
   border-bottom: 11px solid #b2b2b2;
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: -2px;
+  top: -11px;
   right: -39px;
 }
 
-.sorting-button .button:nth-child(2) {
+.sorting-button .button:last-child {
   border: 6px solid #f7f3ec;
   border-top: 11px solid #b2b2b2;
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: 5px;
+  top: -4px;
   right: -71px;
 }
 
-.sorting-button .button:nth-child(1):hover,
-.sorting-button .button:nth-child(1):focus {
+.sorting-button .button:first-child:hover,
+.sorting-button .button:first-child:focus {
   border: 6px solid #f7f3ec;
   border-bottom: 11px solid #000;
 }
 
-.sorting-list .button:nth-child(2):hover,
-.sorting-list .button:nth-child(2):focus {
+.sorting-button .button:last-child:hover,
+.sorting-button .button:last-child:focus {
   border: 6px solid #f7f3ec;
   border-top: 11px solid #000;
 }
 
-.sorting-button .button:nth-child(1):active {
+.sorting-button .button:first-child:active {
   border: 6px solid #f7f3ec;
   border-bottom: 11px solid #ee3643;
 }
 
-.sorting-list .button:nth-child(2):active {
+.sorting-button .button:last-child:active {
   border: 6px solid #f7f3ec;
   border-top: 11px solid #ee3643;
 }
@@ -1637,50 +1633,50 @@ input[type="radio"]:checked + label:after {
 }
 
 .pagination {
-  padding-top: 37px;
-  padding-bottom: 61px;
+  padding-top: 61px;
+  padding-bottom: 70px;
+  padding-left: 236px;
 }
 
 .pagination-list {
   display: flex;
-  padding-left: 239px;
 }
 
-.pagination a {
+.pagination-item  {
   font-family: 'PT Sans Regular', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
   font-stretch: condensed;
+  padding: 11px 16px;
+  border: 1px solid #e5e5e5;
+  margin: 0 4px;
+  border-radius: 3px;
   color: #000;
   outline: none;
 }
 
-.pagination li {
-  padding: 9px 16px;
-  border: 1px solid #e5e5e5;
-  margin: 0 4px;
-  border-radius: 3px;
-}
-
 .pagination-list .next {
-  padding: 9px 33px;
+  padding: 11px 33px;
 }
 
-.pagination-list li:hover,
+.pagination-item:hover,
 .filtres .submit:hover,
-.pagination-list li:focus,
+.pagination-item:focus,
 .filtres .submit:focus {
   border: 1px solid #bdc6ca;
   outline: none;
 }
 
-.pagination-list li:active {
+.pagination-item:active {
   border: 1px solid #ee3643;
 }
 
 .pagination-list .current {
+  color: #e5e5e5;
   background: #ee3643;
+  border: 1px solid #ee3643;
+  border-radius: 5px;
 }
 
 .subtitle {
@@ -2064,7 +2060,7 @@ input[type="radio"]:checked + label:after {
 
 .form-text {
   display: flex;
-  justify-content: baseline;
+  /* justify-content: baseline; */
   flex-direction: column;
   margin-left: 60px;
 }
@@ -2219,8 +2215,8 @@ input[type="radio"]:checked + label:after {
 /*события*/
 .modal-error {
   -webkit-animation: shake 0.6s;
-  animation: shake 0.6s;
   -webkit-animation-duration: 0.6s;
+  animation: shake 0.6s;
   animation-duration: 0.6s;
 }
 
@@ -2275,7 +2271,6 @@ input[type="radio"]:checked + label:after {
 }
 
 @-webkit-keyframes shake {
-
   0%,
   100% {
     -webkit-transform: translateX(0);
@@ -2301,7 +2296,6 @@ input[type="radio"]:checked + label:after {
 }
 
 @keyframes shake {
-
   0%,
   100% {
     -webkit-transform: translateX(0);
@@ -2328,8 +2322,8 @@ input[type="radio"]:checked + label:after {
 
 .modal-error {
   -webkit-animation: shake 0.6s;
-  animation: shake 0.6s;
   -webkit-animation-duration: 0.6s;
+  animation: shake 0.6s;
   animation-duration: 0.6s;
 }
 
