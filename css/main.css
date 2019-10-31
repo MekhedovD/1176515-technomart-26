@@ -19,7 +19,7 @@ a {
 
 .container {
   max-width: 940px;
-  margin: auto;
+  margin: 0 auto;
   /* padding: 0 20px; */
 }
 
@@ -45,12 +45,13 @@ a {
 }
 
 .navigation .header-logo {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   font-stretch: condensed;
-  padding: 8px 54px;
+  padding: 8px 60px;
   margin-top: -1px;
+  /* color: #fff; */
   background-color: #ee3643;
   border-bottom: solid 5px #b52933;
 }
@@ -78,6 +79,7 @@ a {
   outline: none;
   border: none;
   cursor: pointer;
+  width: 270px;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -99,7 +101,7 @@ input[type="search"]::placeholder {
 .search-icon  {
   content: '';
   position: absolute;
-  top: 15px;
+  top: 14px;
   right: 0;
   bottom: 0;
   left: 16px;
@@ -131,9 +133,16 @@ input[type="search"]:focus+.search-icon path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
 }
 
+.navigation ul li:nth-of-type(1) {
+  width: 149px;
+}
+.navigation ul li:nth-of-type(2) {
+  width: 150px;
+}.navigation ul li:nth-of-type(3) {
+  width: 148px;
+}
 .bookmarks,
 .basket,
 .basket-focus,
@@ -145,14 +154,12 @@ input[type="search"]:focus+.search-icon path {
 
 .bookmarks {
   position: relative;
-  width: 151px;
   padding-left: 43px;
 }
 
 .basket,
 .basket-focus {
   position: relative;
-  width: 150px;
   padding-left: 48px;
 }
 
@@ -161,7 +168,6 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .checkout {
-  width: 149px;
   padding-left: 18px;
   background-color: #63a63e;
 }
@@ -177,7 +183,7 @@ input[type="search"]:focus+.search-icon path {
 .bookmarks svg {
   content: '';
   position: absolute;
-  top: 15px;
+  top: 14px;
   right: 0;
   bottom: 0;
   left: 16px;
@@ -198,7 +204,7 @@ input[type="search"]:focus+.search-icon path {
 .basket svg {
   content: '';
   position: absolute;
-  top: 15px;
+  top: 14px;
   right: 0;
   bottom: 0;
   left: 16px;
@@ -227,6 +233,13 @@ input[type="search"]:focus+.search-icon path {
   opacity: 0.7;
 }
 
+.header-top a {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 17px;
+  font-stretch: condensed;
+  color: #fff;
+}
+
 .header-top {
   background-color: #293449;
 }
@@ -243,6 +256,36 @@ input[type="search"]:focus+.search-icon path {
   padding-top: 30px;
 }
 
+.number {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 29px;
+  padding-top: 15px;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorized {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  /* display: flex;
+  justify-content: space-between;
+  flex-direction: row; */
+}
+
+.user {
+  display: flex;
+  position: relative;
+  padding-left: 23px;
+  /* top: 65px;
+  right: 70px; */
+}
+
 .shop-description {
   font-family: 'Cuprum Italic', Arial, sans-serif;
   font-style: italic;
@@ -254,7 +297,252 @@ input[type="search"]:focus+.search-icon path {
   padding-left: 50px;
 }
 
-.wr-header div {
+.header-number {
+  display: block;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 21px;
+  font-stretch: condensed;
+  color: #e9292a;
+  padding-left: 68px;
+  padding-right: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 7px;
+  border: 3px solid #fff;
+}
+
+.header-number+span {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 14px;
+  font-stretch: condensed;
+  color: #32425c;
+  padding-left: 8px;
+}
+
+.header-number::before {
+  content: '';
+  position: absolute;
+  top: 29px;
+  right: 0;
+  bottom: 0;
+  left: 45px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-phone.png');
+  background-repeat: no-repeat;
+  background-position: 5% 0%;
+}
+
+.user-name {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 48px;
+  padding-right: 83px;
+  /* position: absolute; */
+  margin-top: 12px;
+}
+
+.user-name::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-peace.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.user-name:hover::before,
+.user-name:focus::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-hover.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  outline: none;
+}
+
+.user-name:active::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-active.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.user-navigation a,
+.user-name {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 21px;
+  text-align: center;
+  font-stretch: condensed;
+  color: #000;
+  background-color: #fff;
+  outline: none;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ee3643;
+  outline: none;
+}
+
+.user-navigation a:active,
+.user-name:active {
+  color: #b2b2b2;
+}
+
+.user-exit {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 265px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-logout-peace.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.user-exit:hover,
+.user-exit:focus {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 265px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-logout-hover.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  outline: none;
+}
+
+.user-exit:active {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 265px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-logout-active.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.user a {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: underline;
+  font-stretch: condensed;
+  color: #32425c;
+}
+
+
+.user-orders {
+  padding-right: 32px;
+}
+
+.user-personal {
+  /* padding-right: 8px; */
+}
+
+.user-orders::after {
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 108px;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
+}
+
+.user a:hover,
+.user a:focus {
+  color: #ee434f;
+  outline: none;
+}
+
+.user a:active {
+  color: #c5c5c5;
+}
+
+
+.user-navigation {
+  position: relative;
+  display: flex;
+  padding-top: 26px;
+  padding-left: 24px;
+  /* flex-direction: column; */
+}
+/* .user-name::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-peace.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.user-name:hover::before,
+.user-name:focus::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-hover.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  outline: none;
+}
+
+.user-name:active::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 0;
+  bottom: 0;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/icon-user-active.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+} */
+
+
+
+/* .wr-header div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -275,8 +563,8 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .header-top a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 17px;
   font-stretch: condensed;
   color: #fff;
 }
@@ -334,13 +622,23 @@ input[type="search"]:focus+.search-icon path {
   color: #b2b2b2;
 }
 
+.account {
+  display: flex;
+  flex-direction: column;
+}
+
 .authorized {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-
 }
 
+.user {
+  display: flex;
+  position: relative;
+  top: 65px;
+  right: 70px;
+}
 .user-name {
   padding-top: 11px;
   padding-bottom: 11px;
@@ -433,7 +731,9 @@ input[type="search"]:focus+.search-icon path {
   background-image: url('../img/icon-logout-active.png');
   background-repeat: no-repeat;
   background-position: 100% 0;
-}
+} */
+
+
 
 .login-link {
   padding: 11px 26px;
@@ -444,10 +744,10 @@ input[type="search"]:focus+.search-icon path {
 .login-link::before {
   content: '';
   position: absolute;
-  top: 27px;
+  top: 29px;
   right: 0;
   bottom: 0;
-  left: 12px;
+  left: 34px;
   width: 23px;
   height: 23px;
   background-image: url('../img/icon-entrance-peace.png');
@@ -459,10 +759,10 @@ input[type="search"]:focus+.search-icon path {
 .login-link:focus::before {
   content: '';
   position: absolute;
-  top: 27px;
+  top: 29px;
   right: 0;
   bottom: 0;
-  left: 12px;
+  left: 34px;
   width: 23px;
   height: 23px;
   background-image: url('../img/icon-entrance-hover.png');
@@ -474,10 +774,10 @@ input[type="search"]:focus+.search-icon path {
 .login-link:active::before {
   content: '';
   position: absolute;
-  top: 27px;
+  top: 29px;
   right: 0;
   bottom: 0;
-  left: 12px;
+  left: 34px;
   width: 23px;
   height: 23px;
   background-image: url('../img/icon-entrance-active.png');
@@ -489,58 +789,24 @@ input[type="search"]:focus+.search-icon path {
   padding: 11px 25px;
 }
 
-.user a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
-  font-size: 16px;
-  text-decoration: underline;
-  font-stretch: condensed;
-  color: #32425c;
-}
 
-.user {
-  display: flex;
-  position: relative;
-  top: 65px;
-  right: 70px;
-}
-
-.user-orders {
-  padding-right: 32px;
-}
-
-.user-personal {
-  padding-right: 8px;
-}
-
-.user-orders::after {
-  position: absolute;
-  content: "";
-  top: 9px;
-  left: 89px;
-  width: 4px;
-  height: 4px;
-  background-color: #32425c;
-  border-radius: 50%;
-
-}
-
-.user a:hover,
-.user a:focus {
-  color: #ee434f;
-  outline: none;
-}
-
-.user a:active {
-  color: #c5c5c5;
+.site-navigation {
+  padding-top: 2px;
+  border-bottom: solid 5px #293449
 }
 
 .site-navigation a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  display: block;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 17px;
   text-decoration: none;
   font-stretch: condensed;
-  padding: 18px 34px;
+  padding: 18px;/*временно*/
+  padding-left: 33px;
   color: #fff;
+  background-color: #32425c;
+  width: 100%;
+  height: 100%;
 }
 
 .site-navigation a:hover,
@@ -552,8 +818,12 @@ input[type="search"]:focus+.search-icon path {
   color: #c5c5c5;
   outline: none;
 }
+.site-navigation ul {
+  display: flex;
+    /* justify-content: space-around; */
+    /* flex-grow: 1; */
+}
 
-.site-navigation ul,
 .footer-site-navigation,
 .footer-shop-item {
   display: flex;
@@ -561,7 +831,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .site-navigation li  {
-  padding: 18px 0;
+  flex-grow: 1;
 }
 
 .main {
@@ -571,7 +841,7 @@ input[type="search"]:focus+.search-icon path {
 .destination  p,
 .services p,
 .main-contact p {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -643,7 +913,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .main-navigation a {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   color: #000;
   text-transform: uppercase;
@@ -658,7 +928,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .goods p {
-  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 25px;
   font-weight: 600;
   padding-top: 21px;
@@ -780,7 +1050,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .slider h3 {
-  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 35px;
   font-weight: 600;
   text-transform: uppercase;
@@ -790,7 +1060,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .slider p {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   padding: 0;
@@ -847,7 +1117,7 @@ input[type="search"]:focus+.search-icon path {
   background-color: #32425c;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
-  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 21px;
   font-weight: 600;
   font-stretch: condensed;
@@ -926,7 +1196,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .store-nav a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -937,12 +1207,12 @@ input[type="search"]:focus+.search-icon path {
 .bt-store {
   display: inline-block;
   width: 135px;
-  height: 40px;
+  /* height: 40px; */
   background-color: rgba(229, 229, 229, .3);;
   text-align: center;
   padding: 10px;
   margin-left: 25px;
-  margin-top: 17px;
+  margin-top: 16px;
   border-radius: 2px;
 }
 
@@ -997,7 +1267,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .title {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 27px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1042,7 +1312,7 @@ input[type="search"]:focus+.search-icon path {
 }
 
 .filtres p {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1141,7 +1411,7 @@ fieldset {
 }
 
 .price-controls input {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 16px;
   text-align: center;
   color: #000;
@@ -1158,7 +1428,7 @@ fieldset {
 }
 
 .filter legend {
-  font-family: 'PT Sans Bold', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1181,10 +1451,13 @@ fieldset {
   padding-bottom: 73px;
 }
 
-.filter li {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+.filter-product li,
+.filter-power li {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .filter ul {
@@ -1306,11 +1579,11 @@ input[type="radio"]:checked + label:after {
 }
 
 .no-discount .product-price {
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 .product-category {
-  font-family: 'PT Sans Bold', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   font-stretch: condensed;
@@ -1319,7 +1592,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .product-discount {
-  font-family: 'PT Sans Bold', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #999;
@@ -1328,7 +1601,7 @@ input[type="radio"]:checked + label:after {
 
 .product-price {
   position: relative;
-  font-family: 'PT Sans Bold', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   width: 120px;
@@ -1510,6 +1783,7 @@ input[type="radio"]:checked + label:after {
   padding: 9px;
   margin-top: 20px;
   border-radius: 3px;
+  width: 700px;
   background-color: #f7f3ec;
 }
 
@@ -1518,7 +1792,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .sorting p {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1531,7 +1805,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .sorting-list a {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1628,12 +1902,12 @@ input[type="radio"]:checked + label:after {
 }
 
 .product-list li {
-  margin-bottom: 19px;
+  margin-bottom: 24px;
   margin-right: 20px;
 }
 
 .pagination {
-  padding-top: 61px;
+  padding-top: 40px;
   padding-bottom: 70px;
   padding-left: 236px;
 }
@@ -1643,7 +1917,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .pagination-item  {
-  font-family: 'PT Sans Regular', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1680,7 +1954,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .subtitle {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1689,7 +1963,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .headline-title {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 31px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1707,7 +1981,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .partners p {
-  padding: 15px 0px 18px;
+  padding: 13px 0px 19px;
 }
 
 .partners h3,
@@ -1716,7 +1990,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .partners-list li {
-  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -1765,7 +2039,7 @@ input[type="radio"]:checked + label:after {
 .modal-email .button,
 .wr-modal-order-card .button,
 .services-bg-item .button  {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1784,25 +2058,25 @@ input[type="radio"]:checked + label:after {
 
 .product .button {
   display: inline-block;
-  padding: 10px 51px;
+  padding: 10px 60px;
   margin-right: 25px;
 }
 
 .producers .button {
   display: inline-block;
-  padding: 10px 66px;
+  padding: 10px 73px;
   margin-right: 24px;
 }
 
 .partners .button {
   display: inline-block;
-  padding: 10px 39px;
+  padding: 10px 44px;
 }
 
 .contact .button:last-child {
   display: inline-block;
-  padding: 10px 61px;
-  margin-top: 37px;
+  padding: 10px 68px;
+  margin-top: 35px;
 }
 
 .button:hover {
@@ -1816,7 +2090,7 @@ input[type="radio"]:checked + label:after {
 
 .filtres .submit {
   display: inline-block;
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1833,7 +2107,7 @@ input[type="radio"]:checked + label:after {
 .main-contact {
   display: flex;
   justify-content: space-between;
-  margin-top: 59px;
+  margin-top: 63px;
   margin-bottom: 87px;
 }
 
@@ -1854,7 +2128,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .footer-navigation .footer-logo {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 28px;
   text-transform: uppercase;
   font-stretch: condensed;
@@ -1864,11 +2138,11 @@ input[type="radio"]:checked + label:after {
 }
 
 .footer-logo {
-  padding: 15px 39px;
+  padding: 16px 46px;
 }
 
 .footer-top a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   font-stretch: condensed;
   color: #fff;
@@ -1908,14 +2182,14 @@ input[type="radio"]:checked + label:after {
 }
 
 .footer-contact p {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   font-stretch: condensed;
   color: #fff;
 }
 
 .footer-shop-item a {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   font-stretch: condensed;
   color: #ffd180;
@@ -1958,7 +2232,7 @@ input[type="radio"]:checked + label:after {
 .footer-development a,
 .footer-feedback a,
 .footer-feedback p {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
   font-stretch: condensed;
   color: #fff;
@@ -1977,7 +2251,7 @@ input[type="radio"]:checked + label:after {
 
 .footer-social {
   display: flex;
-  padding-left: 111px;
+  padding-left: 118px;
 }
 
 .footer-feedback {
@@ -2043,7 +2317,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .modal-email label {
-  font-family: 'Cuprum Bold', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -2166,7 +2440,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .modal-order-card p {
-  font-family: 'Cuprum Regular', Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   font-stretch: condensed;
