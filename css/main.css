@@ -1979,45 +1979,18 @@ input[type="radio"]:checked + label:after {
 /*Модальные окна*/
 .modal {
   position: fixed;
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center; */
-  /* width: 600px; */
-  /* background-color: #fff; */
-  /* box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); */
 }
 
 /*Обратная форма*/
- /* {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-} */
 .modal-email {
   display: none;
   top: 0;
   left: 0;
-  /* display: none;
-  top: 20%; */
-  /* left: 30%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-top: 7px solid #e9292a;
-  width: 600px;
-  background-color: #fff;
-  /* width: 100vw;
-   height: 100vh; */
 }
 
 .modal-email form {
   overflow: hidden;
   width: 620px;
-  /* height: 430px; */
   border-top: 7px solid #e9292a;
   background-color: #fff;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
@@ -2130,8 +2103,7 @@ input[type="radio"]:checked + label:after {
 }
 
 /*Всплывающая карта*/
-
- .map-img {
+.map-img {
   position: relative;
   overflow: hidden;
   top: 0;
@@ -2161,7 +2133,6 @@ input[type="radio"]:checked + label:after {
 }
 
 /*карточка заказа*/
-
 .wr-modal-order-card {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -2246,7 +2217,6 @@ input[type="radio"]:checked + label:after {
 
 
 /*события*/
-
 .modal-error {
   -webkit-animation: shake 0.6s;
   -webkit-animation-duration: 0.6s;
